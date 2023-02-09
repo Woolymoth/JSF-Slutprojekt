@@ -9,14 +9,16 @@
 </head>
 <body>
     <header>
-        <h1>Lord Of The Rings Character and Cities short facts</h1>
+        <h1>Lord Of The Rings short facts</h1>
         <p>Read up on the characters of the most iconic fantasy series.</p>
-        <table id="info"></table>
+        <table id="info">
+            <tbody></tbody>
+        </table>
     </header>
     <aside id="characters">
         <h1>Pick a character!</h1>
         <input type="button" name="Frodo" id="Frodo" value="Frodo">
-        <input type="button" id="Sam" value="Sam">
+        <input type="button" name="Sam" id="Sam" value="Sam">
         <input type="button" name="Gandalf" id="Gandalf" value="Gandalf">
         <input type="button" name="Aragorn" id="Aragorn" value="Aragorn">
         <input type="button" name="Legolas" id="Legolas" value="Legolas">
@@ -35,6 +37,14 @@
         <input type="button" name="Elvenking's Halls" id="EH" value="Elvenking's Halls">
         <input type="button" name="Erebor" id="Erebor" value="Erebor">
     </aside>
+    <div>
+        <h1>Coose a random book or movie to watch or read!</h1>
+       <select id="userChoice">
+        <option>Pick something</option>
+        <option id="books" name="books">Books</option>
+        <option id="films" name="films">Films</option>
+       </select>
+    </div>
     <script src='code.js'></script>
 </body>
 </html>
