@@ -1,0 +1,8 @@
+#middle {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  border: solid black 3px;
+}
+
+/*# sourceMappingURL=body.css.map */
