@@ -1,8 +1,54 @@
+@charset "UTF-8";
+/* css koden för desktop*/
 #middle {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 500px;
+  width: 900px;
+  z-index: 1;
+}
+
+body {
+  background: rgb(125, 98, 64);
+  background: linear-gradient(0deg, rgb(125, 98, 64) 12%, rgb(241, 215, 177) 47%, rgb(253, 227, 188) 53%, rgb(162, 73, 4) 85%, rgb(255, 112, 0) 90%, rgb(162, 73, 4) 94%);
+  display: flex;
   flex-direction: column;
-  align-content: space-between;
-  border: solid black 3px;
+  align-items: center;
+}
+
+#frodo {
+  position: relative;
+  left: 270px;
+  bottom: 400px;
+  z-index: 0;
+}
+
+#gandalf {
+  position: relative;
+  z-index: 0;
+  right: 270px;
+  bottom: 850px;
+}
+
+/* Css koden för mobilverisionen*/
+@media only screen and (max-width: 768px) {
+  #middle {
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    background-color: rgb(125, 98, 64);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #gandalf {
+    display: none;
+  }
+  #frodo {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=body.css.map */

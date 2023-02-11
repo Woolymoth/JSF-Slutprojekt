@@ -5,38 +5,43 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Lord Of The Rings Character List</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/mainstyle.css'>
 </head>
-<body>
     <header>
-        <h1>Lord Of The Rings short facts</h1>
-        <p>Read up on the characters of the most iconic fantasy series.</p>
-        <table id="info">
-            <tbody></tbody>
-        </table>
+        <h1 class="h1head">Lord Of The Rings short facts</h1>
+        <p>Read up on the characters and places of the most iconic fantasy series.</p>
     </header>
-    <aside id="characters">
-        <h1>Pick a character!</h1>
-        <input type="button" name="Frodo" id="Frodo" value="Frodo">
-        <input type="button" name="Sam" id="Sam" value="Sam">
-        <input type="button" name="Gandalf" id="Gandalf" value="Gandalf">
-        <input type="button" name="Aragorn" id="Aragorn" value="Aragorn">
-        <input type="button" name="Legolas" id="Legolas" value="Legolas">
-        <input type="button" name="Gimli" id="Gimli" value="Gimli">
-        <input type="button" name="Merry" id="Merry" value="Merry">
-        <input type="button" name="Pippin" id="Pippin" value="Pippin">
-        <input type="button" name="Boromir" id="Boromir" value="Boromir">
-    </aside> 
-    <aside id="cities">
-        <h1>Pick a city!</h1>
-        <input type="button" name="Minas Tirith" id="MT" value="Minas Tirith">
-        <input type="button" name="Annúminas" id="Annu" value="Annúminas">
-        <input type="button" name="Fornost" id="Fornost" value="Fornost">
-        <input type="button" name="Michel Delving" id="MD" value="Michel Delving">
-        <input type="button" name="Valmar" id="Valmar" value="Valmar">
-        <input type="button" name="Elvenking's Halls" id="EH" value="Elvenking's Halls">
-        <input type="button" name="Erebor" id="Erebor" value="Erebor">
-    </aside>
+    <div id="middle">
+        <aside id="characters">
+            <h1 class="buttonTitle">Pick a name!</h1>
+            <div class="buttonSection">
+                <input type="button" class="charButton" name="Frodo" id="Frodo" value="Frodo">
+                <input type="button" class="charButton" name="Sam" id="Sam" value="Sam">
+                <input type="button" class="charButton" name="Gandalf" id="Gandalf" value="Gandalf">
+                <input type="button" class="charButton" name="Aragorn" id="Aragorn" value="Aragorn">
+                <input type="button" class="charButton" name="Legolas" id="Legolas" value="Legolas">
+                <input type="button" class="charButton" name="Gimli" id="Gimli" value="Gimli">
+                <input type="button" class="charButton" name="Merry" id="Merry" value="Merry">
+                <input type="button" class="charButton" name="Pippin" id="Pippin" value="Pippin">
+                <input type="button" class="charButton" name="Boromir" id="Boromir" value="Boromir">
+            </div>
+        </aside> 
+            <table id="info">
+                <tbody></tbody>
+            </table>
+        <aside id="cities">
+            <h1 class="buttonTitle" id="h1City">Pick a city!</h1>
+            <div class="buttonSection">
+                <input type="button" class="cityButton" name="Minas Tirith" id="MT" value="Minas Tirith">
+                <input type="button" class="cityButton" name="Annúminas" id="Annu" value="Annúminas">
+                <input type="button" class="cityButton" name="Fornost" id="Fornost" value="Fornost">
+                <input type="button" class="cityButton" name="Michel Delving" id="MD" value="Michel Delving">
+                <input type="button" class="cityButton" name="Valmar" id="Valmar" value="Valmar">
+                <input type="button" class="cityButton" name="Elvenking's Halls" id="EH" value="Elvenking's Halls">
+                <input type="button" class="cityButton" name="Erebor" id="Erebor" value="Erebor">
+            </div>
+        </aside>
+    </div>
     <div>
         <h1>Coose a random book or movie to watch or read!</h1>
        <select id="userChoice">
@@ -45,6 +50,13 @@
         <option id="films" name="films">Films</option>
        </select>
     </div>
+    <body>
+        <img id="frodo" src="css/pictures/frodo.png" alt="frodo"
+        width="190" 
+        height="360" />
+        <img id="gandalf" src="css/pictures/gandalf.png" alt="Gandalf"
+        width="200" 
+        height="400" />
     <script src='code.js'></script>
 </body>
 </html>

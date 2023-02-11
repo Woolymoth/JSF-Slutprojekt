@@ -64,7 +64,7 @@ function displayChar(data, charId) {
     var element = document.querySelector("tbody");
     element.remove();
     var myChar = data.results[charId];
-    var tab = "<tr>\n      <th>Name</th>\n      <th>Hair coloe</th>\n      <th>Date of Birth</th>\n      <th>Eye Color</th>\n     </tr>";
+    var tab = "<tr>\n      <th>Name</th>\n      <th>Hair color</th>\n      <th>Date of Birth</th>\n      <th>Eye Color</th>\n     </tr>";
     const infoSpace = document.getElementById('info').innerHTML += tab +=
     "<tr>\n    <td>".concat(myChar.name, "</td>\n    <td>").concat(myChar.hair_color, "</td>\n    <td>").concat(myChar.date_of_birth, "</td> \n    <td>").concat(myChar.eye_color, "</td> \n    </tr>");
 }

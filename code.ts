@@ -80,7 +80,7 @@ function displayChar(data : any, charId : any) {
     let tab = 
     `<tr>
       <th>Name</th>
-      <th>Hair coloe</th>
+      <th>Hair color</th>
       <th>Date of Birth</th>
       <th>Eye Color</th>
      </tr>`;
