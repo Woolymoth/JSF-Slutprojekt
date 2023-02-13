@@ -23,39 +23,36 @@ function displayUserChoice(data :any){
     let tab = `<tr>
     <th>Title</th>
    </tr>`;
-   //const infoSpace = document.getElementById('info').innerHTML += tab +=
+   // @ts-ignore
+   const infoSpace = document.getElementById('info')!.innerHTML += tab +=
   `<tr>
   <td>${data.title}</td>
   </tr>`
      console.log(userChoise)
 };
 
+function selectChoice(event: any){
+    var yourSelect = document.getElementById(event.target.id);
+    let thirdUrl;
+    let random : any;
+    switch(yourSelect!.options[yourSelect!.selectedIndex].id){
+        case "books":
+            thirdUrl= "https://lotrapi.co/api/v1/books/";
+            random= Math.floor(Math.random() * 4) +1; 
+            break; 
+        case "films":
+           thirdUrl= "https://lotrapi.co/api/v1/films/";
+           random= Math.floor(Math.random() * 6) +1;
+            break;
+    }
+    fetchSelect(thirdUrl, random);
+    event.document
+    event.preventDefault();
+};
 
-//function selectChoice(event){
-    //var yourSelect = document.getElementById(event.target.id);
-    //let thirdUrl;
-    //let random;
-    //switch(yourSelect.options[yourSelect.selectedIndex].id){
-        //case "books":
-           // thirdUrl= "https://lotrapi.co/api/v1/books/";
-            //random= Math.floor(Math.random() * 4) +1; 
-            //break; 
-        //case "films":
-           //thirdUrl= "https://lotrapi.co/api/v1/films/";
-           //random= Math.floor(Math.random() * 6) +1;
-           // break;
-    //}
-    //fetchSelect(thirdUrl, random);
-    //event.document
-   // event.preventDefault();
-//};
+let select = document.querySelector('#userChoice')!;
+select.addEventListener('change', selectChoice);
 
-//let select = document.querySelector('#userChoice');
-//select.addEventListener('change', selectChoice);
-
-
-
-/////////////////////////////////////////////////////////////////////////////////7
 
 
 
@@ -84,7 +81,8 @@ function displayChar(data : any, charId : any) {
       <th>Date of Birth</th>
       <th>Eye Color</th>
      </tr>`;
-     //const infoSpace = document.getElementById('info').innerHTML += tab +=
+     // @ts-ignore
+     const infoSpace = document.getElementById('info')!.innerHTML += tab +=
     `<tr>
     <td>${myChar.name}</td>
     <td>${myChar.hair_color}</td>
@@ -127,15 +125,25 @@ function charButton(event : any){
     event.document
     event.preventDefault();
 }
-//document.querySelector('#Frodo').addEventListener('click', charButton);
-//document.querySelector('#Sam').addEventListener('click', charButton);
-//document.querySelector('#Gandalf').addEventListener('click', charButton);
-//document.querySelector('#Aragorn').addEventListener('click', charButton);
-//document.querySelector('#Legolas').addEventListener('click', charButton);
-//document.querySelector('#Gimli').addEventListener('click', charButton);
-//document.querySelector('#Merry').addEventListener('click', charButton);
-//document.querySelector('#Pippin').addEventListener('click', charButton);
-//document.querySelector('#Boromir').addEventListener('click', charButton);
+let frodo : any = document.querySelector('#Frodo');
+frodo.addEventListener('click', charButton);
+let sam : any = document.querySelector('#Sam');
+sam.addEventListener('click', charButton);
+let gandalf : any 
+gandalf.document.querySelector('#Gandalf').addEventListener('click', charButton);
+let aragorn : any = document.querySelector('#Aragorn');
+aragorn.addEventListener('click', charButton);
+let legolas : any = document.querySelector('#Legolas');
+legolas.addEventListener('click', charButton);
+let gimli : any = document.querySelector('#Gimli');
+gimli.addEventListener('click', charButton);
+let merry : any = document.querySelector('#Merry');
+merry.addEventListener('click', charButton);
+let pippin : any = document.querySelector('#Pippin');
+pippin.addEventListener('click', charButton);
+let boromir  : any = document.querySelector('#Boromir');
+boromir.addEventListener('click', charButton);
+
 function fetchCity(cityId : any) {
     fetch(cityUrl)
         .then(function (response) {
@@ -161,7 +169,9 @@ function displayCity(data : any, cityId : any) {
     <th>Location</th>
     <th>Inhabitants</th>
    </tr>`;
-   //const infoSpace = document.getElementById('info').innerHTML += tab +=
+   let info: HTMLElement  = document.getElementById('info')!;
+   // @ts-ignore
+   const infoSpace = info.innerHTML += tab +=
   `<tr>
   <td>${theCity.name}</td>
   <td>${theCity.founded_date}</td>
@@ -199,10 +209,17 @@ function cityButton(event : any) {
     event.document;
     event.preventDefault();
 }
-//document.querySelector('#MT').addEventListener('click', cityButton);
-//document.querySelector('#Annu').addEventListener('click', cityButton);
-//document.querySelector('#Fornost').addEventListener('click', cityButton);
-//document.querySelector('#MD').addEventListener('click', cityButton);
-//document.querySelector('#Valmar').addEventListener('click', cityButton);
-//document.querySelector('#EH').addEventListener('click', cityButton);
-//document.querySelector('#Erebor').addEventListener('click', cityButton);
+let MT : any  = document.querySelector('#MT');
+MT.addEventListener('click', cityButton);
+let annu : any  = document.querySelector('#Annu');
+annu.addEventListener('click', cityButton);
+let fornost  : any  = document.querySelector('#Fornost');
+fornost.addEventListener('click', cityButton);
+let MD : any  = document.querySelector('#MD');
+MD.addEventListener('click', cityButton);
+let valmar : any  = document.querySelector('#Valmar');
+valmar.addEventListener('click', cityButton);
+let EH : any  = document.querySelector('#EH');
+EH.addEventListener('click', cityButton);
+let erebor : any  = document.querySelector('#Erebor');
+erebor.addEventListener('click', cityButton);
