@@ -1,3 +1,4 @@
+//Comment
 var charUrl = "https://lotrapi.co/api/v1/characters";
 var cityUrl = "https://lotrapi.co/api/v1/cities";
 function fetchSelect(thirdUrl, random) {
@@ -110,8 +111,8 @@ var frodo = document.querySelector('#Frodo');
 frodo.addEventListener('click', charButton);
 var sam = document.querySelector('#Sam');
 sam.addEventListener('click', charButton);
-var gandalf;
-gandalf.document.querySelector('#Gandalf').addEventListener('click', charButton);
+var gandalf = document.querySelector('#Gandalf');
+gandalf.addEventListener('click', charButton);
 var aragorn = document.querySelector('#Aragorn');
 aragorn.addEventListener('click', charButton);
 var legolas = document.querySelector('#Legolas');

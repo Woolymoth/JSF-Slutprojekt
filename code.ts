@@ -1,3 +1,5 @@
+//Comment
+
 const charUrl = "https://lotrapi.co/api/v1/characters";
 
 const cityUrl="https://lotrapi.co/api/v1/cities";
@@ -32,10 +34,10 @@ function displayUserChoice(data :any){
 };
 
 function selectChoice(event: any){
-    var yourSelect = document.getElementById(event.target.id);
+    var yourSelect = document.getElementById(event.target.id) as HTMLSelectElement;
     let thirdUrl;
     let random : any;
-    switch(yourSelect!.options[yourSelect!.selectedIndex].id){
+    switch(yourSelect.options[yourSelect.selectedIndex].id) {
         case "books":
             thirdUrl= "https://lotrapi.co/api/v1/books/";
             random= Math.floor(Math.random() * 4) +1; 
@@ -129,8 +131,8 @@ let frodo : any = document.querySelector('#Frodo');
 frodo.addEventListener('click', charButton);
 let sam : any = document.querySelector('#Sam');
 sam.addEventListener('click', charButton);
-let gandalf : any 
-gandalf.document.querySelector('#Gandalf').addEventListener('click', charButton);
+let gandalf : any=  document.querySelector('#Gandalf');
+gandalf.addEventListener('click', charButton);
 let aragorn : any = document.querySelector('#Aragorn');
 aragorn.addEventListener('click', charButton);
 let legolas : any = document.querySelector('#Legolas');
