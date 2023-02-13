@@ -31,10 +31,10 @@ function displayUserChoice(data :any){
 };
 
 
-//function selectChoice(event :any){
+//function selectChoice(event){
     //var yourSelect = document.getElementById(event.target.id);
     //let thirdUrl;
-    //let random : any;
+    //let random;
     //switch(yourSelect.options[yourSelect.selectedIndex].id){
         //case "books":
            // thirdUrl= "https://lotrapi.co/api/v1/books/";

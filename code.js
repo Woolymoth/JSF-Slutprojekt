@@ -25,22 +25,22 @@ function displayUserChoice(data) {
 }
 ;
 function selectChoice(event){
-    var yourSelect = document.getElementById(event.target.id);
-    let thirdUrl;
-    let random;
-    switch(yourSelect.options[yourSelect.selectedIndex].id){
-        case "books":
-        thirdUrl= "https://lotrapi.co/api/v1/books/";
-        random= Math.floor(Math.random() * 4) +1; 
-        break; 
-        case "films":
-        thirdUrl= "https://lotrapi.co/api/v1/films/";
-        random= Math.floor(Math.random() * 6) +1;
-        break;
-        }
-    fetchSelect(thirdUrl, random);
-    event.document
-    event.preventDefault();
+var yourSelect = document.getElementById(event.target.id);
+let thirdUrl;
+let random;
+switch(yourSelect.options[yourSelect.selectedIndex].id){
+case "books":
+ thirdUrl= "https://lotrapi.co/api/v1/books/";
+random= Math.floor(Math.random() * 4) +1; 
+break; 
+case "films":
+thirdUrl= "https://lotrapi.co/api/v1/films/";
+random= Math.floor(Math.random() * 6) +1;
+ break;
+}
+fetchSelect(thirdUrl, random);
+event.document
+ event.preventDefault();
 };
 let select = document.querySelector('#userChoice');
 select.addEventListener('change', selectChoice);
