@@ -1,10 +1,8 @@
-//Comment
-
 const charUrl = "https://lotrapi.co/api/v1/characters";
 
 const cityUrl="https://lotrapi.co/api/v1/cities";
-
-function fetchSelect(thirdUrl : any,random : number){
+let data : JsonWebKey;
+function fetchSelect(thirdUrl : string ,random : number){
     fetch(thirdUrl + random)
     .then((response) =>{
         if (response.ok){
@@ -18,8 +16,8 @@ function fetchSelect(thirdUrl : any,random : number){
     })
 }
 
-function displayUserChoice(data :any){
-    const element : any = document.querySelector("tbody");
+function displayUserChoice(data : any){
+    const element = document.querySelector("tbody") as HTMLElement;
     element.remove();
     let userChoise = data;
     let tab = `<tr>
@@ -35,8 +33,8 @@ function displayUserChoice(data :any){
 
 function selectChoice(event: any){
     var yourSelect = document.getElementById(event.target.id) as HTMLSelectElement;
-    let thirdUrl;
-    let random : any;
+    let thirdUrl : string = "null";
+    let random : number = 0;
     switch(yourSelect.options[yourSelect.selectedIndex].id) {
         case "books":
             thirdUrl= "https://lotrapi.co/api/v1/books/";
@@ -52,13 +50,13 @@ function selectChoice(event: any){
     event.preventDefault();
 };
 
-let select = document.querySelector('#userChoice')!;
+let select = document.querySelector('#userChoice')as HTMLElement;
 select.addEventListener('change', selectChoice);
 
 
 
 
-function fetchChar(charId : any) {
+function fetchChar(charId : number) {
     fetch(charUrl)
     .then((response) =>  {
         if (response.ok) {
@@ -71,8 +69,8 @@ function fetchChar(charId : any) {
         displayChar(data, charId)
     })
 };
-
-function displayChar(data : any, charId : any) {
+const infoDoc = document.getElementById('info') as HTMLElement;
+function displayChar(data : any, charId : number) {
     const element : any = document.querySelector("tbody");
     element.remove();
     let myChar = data.results[charId];
@@ -83,8 +81,8 @@ function displayChar(data : any, charId : any) {
       <th>Date of Birth</th>
       <th>Eye Color</th>
      </tr>`;
-     // @ts-ignore
-     const infoSpace = document.getElementById('info')!.innerHTML += tab +=
+    // @ts-ignore
+     const infoSpace = infoDoc.innerHTML += tab +=
     `<tr>
     <td>${myChar.name}</td>
     <td>${myChar.hair_color}</td>
@@ -93,7 +91,7 @@ function displayChar(data : any, charId : any) {
     </tr>`
 };
 function charButton(event : any){
-    let charId;
+    let charId : number = 12;
     switch(event.target.name){
         case "Frodo":
             charId=0;
@@ -127,26 +125,26 @@ function charButton(event : any){
     event.document
     event.preventDefault();
 }
-let frodo : any = document.querySelector('#Frodo');
+let frodo = document.querySelector('#Frodo') as HTMLElement;
 frodo.addEventListener('click', charButton);
-let sam : any = document.querySelector('#Sam');
+let sam = document.querySelector('#Sam')as HTMLElement;
 sam.addEventListener('click', charButton);
-let gandalf : any=  document.querySelector('#Gandalf');
+let gandalf =  document.querySelector('#Gandalf')as HTMLElement;
 gandalf.addEventListener('click', charButton);
-let aragorn : any = document.querySelector('#Aragorn');
+let aragorn = document.querySelector('#Aragorn')as HTMLElement;
 aragorn.addEventListener('click', charButton);
-let legolas : any = document.querySelector('#Legolas');
+let legolas = document.querySelector('#Legolas')as HTMLElement;
 legolas.addEventListener('click', charButton);
-let gimli : any = document.querySelector('#Gimli');
+let gimli = document.querySelector('#Gimli')as HTMLElement;
 gimli.addEventListener('click', charButton);
-let merry : any = document.querySelector('#Merry');
+let merry = document.querySelector('#Merry')as HTMLElement;
 merry.addEventListener('click', charButton);
-let pippin : any = document.querySelector('#Pippin');
+let pippin = document.querySelector('#Pippin')as HTMLElement;
 pippin.addEventListener('click', charButton);
-let boromir  : any = document.querySelector('#Boromir');
+let boromir = document.querySelector('#Boromir')as HTMLElement;
 boromir.addEventListener('click', charButton);
 
-function fetchCity(cityId : any) {
+function fetchCity(cityId : number) {
     fetch(cityUrl)
         .then(function (response) {
         if (response.ok) {
@@ -161,8 +159,8 @@ function fetchCity(cityId : any) {
     });
 }
 ;
-function displayCity(data : any, cityId : any) {
-    const element : any= document.querySelector("tbody");
+function displayCity(data : any, cityId : number) {
+    const element = document.querySelector("tbody") as HTMLElement;
     element.remove();
     var theCity = data.results[cityId];
     var tab = `<tr>
@@ -183,7 +181,7 @@ function displayCity(data : any, cityId : any) {
 }
 ;
 function cityButton(event : any) {
-    var cityId;
+    var cityId = 100;
     switch (event.target.name) {
         case "Minas Tirith":
             cityId = 6;
@@ -211,17 +209,17 @@ function cityButton(event : any) {
     event.document;
     event.preventDefault();
 }
-let MT : any  = document.querySelector('#MT');
+let MT  = document.querySelector('#MT')as HTMLElement;
 MT.addEventListener('click', cityButton);
-let annu : any  = document.querySelector('#Annu');
+let annu  = document.querySelector('#Annu')as HTMLElement;
 annu.addEventListener('click', cityButton);
-let fornost  : any  = document.querySelector('#Fornost');
+let fornost  = document.querySelector('#Fornost')as HTMLElement;
 fornost.addEventListener('click', cityButton);
-let MD : any  = document.querySelector('#MD');
+let MD  = document.querySelector('#MD')as HTMLElement;
 MD.addEventListener('click', cityButton);
-let valmar : any  = document.querySelector('#Valmar');
+let valmar  = document.querySelector('#Valmar')as HTMLElement;
 valmar.addEventListener('click', cityButton);
-let EH : any  = document.querySelector('#EH');
+let EH = document.querySelector('#EH')as HTMLElement;
 EH.addEventListener('click', cityButton);
-let erebor : any  = document.querySelector('#Erebor');
+let erebor  = document.querySelector('#Erebor')as HTMLElement;
 erebor.addEventListener('click', cityButton);
