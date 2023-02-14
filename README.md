@@ -37,7 +37,7 @@ The project is divided into several files and folders, which is as following.
 To use and/or add to the project you need to clone the repository from github, as long as you have the tsconfig that is included in the repository you do not need to touch it further.
 
 
-Once you have the files in your local directory you need to compile first compile the typsecript.
+Once you have the files in your local directory you need to compile.
 First check that your compiler is up to date by typing "tsc --version" to check what version of the program you are running.
 When that is done enter "tsc code.ts" then node.js.
 
