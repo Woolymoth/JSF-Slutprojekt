@@ -1,8 +1,9 @@
+/*variables*/
 $aside-bgc: rgba(222, 171, 124, 0.7);
 $buttonTitle-bgc: rgba(71, 97, 122, 0.8);
 $border-color: rgb(74, 72, 72, 0.7);
 
-/* css koden för desktop*/
+/* css code for desktop*/
 aside{
     display: flex;
     flex-direction: column;
@@ -11,49 +12,44 @@ aside{
     justify-content: space-around;
     max-width: 120px;
     background-color: $aside-bgc ;
-}
-.buttonSection{
-display: flex;
-flex-direction: column;
-max-width: 120px;
-}
-.buttonTitle{
-    width: 95%;
-    font-size: 30px;
-    padding: 1px;
-    background-color: $buttonTitle-bgc;
-    border: solid 3px;
-    border-color:border-color;
-    border-radius: 5px;
-}
-
-
-/* Css koden för mobilverisionen*/
-@media only screen and (max-width: 768px) {
-    aside{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        max-width: 60px;
-        background-color: $aside-bgc ;
-    }
-    .buttonSection{
-    display: flex;
-    flex-direction: column;
-    max-width: 60px;
-    }
     .buttonTitle{
-        width: 90%;
-        font-size: 20px;
+        width: 95%;
+        font-size: 30px;
         padding: 1px;
         background-color: $buttonTitle-bgc;
         border: solid 3px;
-        border-color:$border-color;
+        border-color:border-color;
         border-radius: 5px;
     }
-    #h1City{
-        margin-bottom: 37px;
-    }
+    .buttonSection{
+        display: flex;
+        flex-direction: column;
+        max-width: 120px;
+        }
+}
 
+
+
+/* css code for mobile*/
+@media only screen and (max-width: 768px) {
+    aside{
+        max-width: 60px;
+        .buttonSection{
+            display: flex;
+            flex-direction: column;
+            max-width: 60px;
+            }
+            .buttonTitle{
+                width: 90%;
+                font-size: 20px;
+                background-color: $buttonTitle-bgc;
+                border: solid 3px;
+                border-color:$border-color;
+                border-radius: 5px;
+            }
+            #h1City{
+                margin-bottom: 37px;
+            }
+        }
 
 }

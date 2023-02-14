@@ -1,13 +1,12 @@
 @charset "UTF-8";
-/* css koden för desktop*/
+/* css code for desktop*/
 table {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-tbody {
+table tbody {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,16 +18,14 @@ tbody {
   background-size: 500px;
   background-position: center;
 }
-
-th {
+table tbody th {
   margin-top: 10px;
   margin-right: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
-td {
+table tbody td {
   margin-top: 10px;
   margin-left: 20px;
   display: flex;
@@ -38,36 +35,23 @@ td {
 
 /* Css koden för mobilverisionen*/
 @media only screen and (max-width: 768px) {
-  table {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  tbody {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: solid 10px;
+  table tbody {
     width: 200px;
     height: 200px;
-    background-image: url(pictures/tree.png);
     background-size: 250px;
-    background-position: center;
   }
-  th {
+  table th {
     margin-top: 10px;
     margin-right: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
-  td {
+  table td {
     margin-top: 10px;
     margin-left: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    font-size: 10px;
+    inline-size: 150px;
+    overflow: hidden;
+    width: 70px;
+    margin-left: 5px;
   }
 }
 

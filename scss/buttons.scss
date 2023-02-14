@@ -1,45 +1,61 @@
+/*Variables*/
 $charbutton-bcg-color: rgb(13, 141, 13);
 $cittybutton-bcg-color: rgb(60, 60, 222);
 $button-text-color: rgb(218, 255, 218);
 $hover-border-color: rgb(218, 255, 218);
 $border-color: rgb(74, 72, 72, 0.7);
 $active-border-color: rgb(79, 61, 35);
+$button-radius: 20px;
+$mobile-button-height: 25px;
+$mobile-button-radius: 10px;
+$border-structure: solid 3px;
+/*mixin*/
+@mixin char-button {
+    background-color: $charbutton-bcg-color;
+    height: 30px;
+    border-top-right-radius: $button-radius;
+    border-bottom-left-radius: $button-radius;
+    border:$border-structure;
+    border-color: $border-color;
 
-/* css koden för desktop*/
+    &:hover{
+        border-color: $hover-border-color;
+    }
+    &:active{
+        background-color: $active-border-color;
+    }
+}
+@mixin city-button {
+    background-color: $cittybutton-bcg-color;
+    height: 40px;
+    border-top-left-radius: $button-radius;
+    border-bottom-right-radius: $button-radius;
+    border:$border-structure;
+    border-color: $border-color;
+    &:hover{
+        border-color: $hover-border-color;
+    }
+    &:active{
+        background-color: $active-border-color;
+    }
+}
+
+/* css code for desktop*/
 input{
     margin-bottom: 10px;
     color: $button-text-color;
+        
 }
 .charButton{
-background-color: $charbutton-bcg-color;
-height: 30px;
-border-top-right-radius: 20px;
-border-bottom-left-radius: 20px;
-border:solid 3px;
-border-color: $border-color;
-}
-.charButton:hover{
-    border-color: $hover-border-color;
-}
-.charButton:active{
-    background-color: $active-border-color ;
-}
-.cityButton{
-background-color: $cittybutton-bcg-color;
-height: 40px;
-border-top-left-radius: 20px;
-border-bottom-right-radius: 20px;
-border:solid 3px;
-border-color: $border-color;
-}
-.cityButton:hover{
-    border-color: $hover-border-color;
-}
-.cityButton:active{
-    background-color: $active-border-color ;
+    @include char-button;
 }
 
-/* Css koden för mobilverisionen*/
+.cityButton{
+    @include city-button;
+}
+
+
+/*css code for mobile*/
 @media only screen and (max-width: 768px) {
     input{
         margin-bottom: 5px;
@@ -48,16 +64,17 @@ border-color: $border-color;
     }
     .charButton{
     background-color: $charbutton-bcg-color;
-    height: 25px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    height: $mobile-button-height;
+    border-top-right-radius: $mobile-button-radius;
+    border-bottom-left-radius: $mobile-button-radius;
     }
     .cityButton{
     margin-bottom: 10px;
+    overflow: hidden;
     background-color: $cittybutton-bcg-color;
-    height: 25px;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    height: $mobile-button-height;
+    border-top-left-radius: $mobile-button-radius;
+    border-bottom-right-radius: $mobile-button-radius;
     }
 
 

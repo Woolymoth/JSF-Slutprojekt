@@ -1,39 +1,43 @@
 $border-color: rgb(74, 72, 72, 0.7);
+$tbody-width-height: 400px;
+$tbody-mobile-width-heigth: 200px;
 
-/* css koden för desktop*/
+/* css code for desktop*/
 
 table{
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    tbody{
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        border: solid 10px;
+        border-color: $border-color;
+        width: $tbody-width-height;
+        height: $tbody-width-height;
+        background-image: url(pictures/tree.png);
+        background-size: 500px;
+        background-position: center;
+        th{
+            margin-top: 10px;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        td{
+            margin-top: 10px;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
  }
- tbody{
-     display: flex; 
-     align-items: center;
-     justify-content: center;
-     border: solid 10px;
-     border-color: $border-color;
-     width: 400px;
-     height: 400px;
-     background-image: url(pictures/tree.png);
-     background-size: 500px;
-     background-position: center;
- }
- th{
-     margin-top: 10px;
-     margin-right: 20px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
- }
- td{
-     margin-top: 10px;
-     margin-left: 20px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
- }
+
+
 
 
 
@@ -42,36 +46,27 @@ table{
 /* Css koden för mobilverisionen*/
 @media only screen and (max-width: 768px) {
     table{
-        display: flex; 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        tbody{
+            width: $tbody-mobile-width-heigth;
+            height: $tbody-mobile-width-heigth;
+            background-size: 250px;
+        }
+        th{
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+        td{
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 10px;
+            inline-size: 150px;
+            overflow: hidden;
+            width: 70px;
+            margin-left: 5px;
+        }
+
      }
-     tbody{
-         display: flex; 
-         align-items: center;
-         justify-content: center;
-         border: solid 10px;
-         width: 200px;
-         height: 200px;
-         background-image: url(pictures/tree.png);
-         background-size: 250px;
-         background-position: center;
-     }
-     th{
-         margin-top: 10px;
-         margin-right: 20px;
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-     }
-     td{
-         margin-top: 10px;
-         margin-left: 20px;
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-     }
+
     
 
 

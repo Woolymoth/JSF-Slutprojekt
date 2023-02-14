@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/* css koden för desktop*/
+/* css code for desktop*/
 .h1head {
   background-image: url(pictures/ring.png);
   background-size: 150px;
@@ -7,9 +6,10 @@
   background-repeat: no-repeat;
   padding: 47px;
   text-align: center;
+  margin-top: 1px;
 }
 
-/* Css koden för mobilverisionen*/
+/*css code for mobile*/
 @media only screen and (max-width: 768px) {
   .h1head {
     background-image: url(pictures/ring.png);

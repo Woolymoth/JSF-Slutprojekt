@@ -1,5 +1,5 @@
-@charset "UTF-8";
-/* css koden för desktop*/
+/*variables*/
+/* css code for desktop*/
 aside {
   display: flex;
   flex-direction: column;
@@ -9,14 +9,7 @@ aside {
   max-width: 120px;
   background-color: rgba(222, 171, 124, 0.7);
 }
-
-.buttonSection {
-  display: flex;
-  flex-direction: column;
-  max-width: 120px;
-}
-
-.buttonTitle {
+aside .buttonTitle {
   width: 95%;
   font-size: 30px;
   padding: 1px;
@@ -25,31 +18,31 @@ aside {
   border-color: border-color;
   border-radius: 5px;
 }
+aside .buttonSection {
+  display: flex;
+  flex-direction: column;
+  max-width: 120px;
+}
 
-/* Css koden för mobilverisionen*/
+/* css code for mobile*/
 @media only screen and (max-width: 768px) {
   aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     max-width: 60px;
-    background-color: rgba(222, 171, 124, 0.7);
   }
-  .buttonSection {
+  aside .buttonSection {
     display: flex;
     flex-direction: column;
     max-width: 60px;
   }
-  .buttonTitle {
+  aside .buttonTitle {
     width: 90%;
     font-size: 20px;
-    padding: 1px;
     background-color: rgba(71, 97, 122, 0.8);
     border: solid 3px;
     border-color: rgba(74, 72, 72, 0.7);
     border-radius: 5px;
   }
-  #h1City {
+  aside #h1City {
     margin-bottom: 37px;
   }
 }
