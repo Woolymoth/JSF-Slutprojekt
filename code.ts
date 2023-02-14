@@ -1,7 +1,7 @@
 const charUrl = "https://lotrapi.co/api/v1/characters";
 
 const cityUrl="https://lotrapi.co/api/v1/cities";
-let data : JsonWebKey;
+
 function fetchSelect(thirdUrl : string ,random : number){
     fetch(thirdUrl + random)
     .then((response) =>{
@@ -18,13 +18,13 @@ function fetchSelect(thirdUrl : string ,random : number){
 
 function displayUserChoice(data : any){
     const element = document.querySelector("tbody") as HTMLElement;
+    const InfoElement= document.getElementById('info') as HTMLElement;
     element.remove();
     let userChoise = data;
     let tab = `<tr>
     <th>Title</th>
    </tr>`;
-   // @ts-ignore
-   const infoSpace = document.getElementById('info')!.innerHTML += tab +=
+    InfoElement.innerHTML += tab +=
   `<tr>
   <td>${data.title}</td>
   </tr>`
@@ -33,7 +33,7 @@ function displayUserChoice(data : any){
 
 function selectChoice(event: any){
     var yourSelect = document.getElementById(event.target.id) as HTMLSelectElement;
-    let thirdUrl : string = "null";
+    let thirdUrl : string = "";
     let random : number = 0;
     switch(yourSelect.options[yourSelect.selectedIndex].id) {
         case "books":
@@ -69,9 +69,10 @@ function fetchChar(charId : number) {
         displayChar(data, charId)
     })
 };
-const infoDoc = document.getElementById('info') as HTMLElement;
+
 function displayChar(data : any, charId : number) {
-    const element : any = document.querySelector("tbody");
+    const element = document.querySelector("tbody") as HTMLElement;
+    const infoSpace = document.getElementById('info') as HTMLElement;
     element.remove();
     let myChar = data.results[charId];
     let tab = 
@@ -81,8 +82,7 @@ function displayChar(data : any, charId : number) {
       <th>Date of Birth</th>
       <th>Eye Color</th>
      </tr>`;
-    // @ts-ignore
-     const infoSpace = infoDoc.innerHTML += tab +=
+    infoSpace.innerHTML += tab +=
     `<tr>
     <td>${myChar.name}</td>
     <td>${myChar.hair_color}</td>
