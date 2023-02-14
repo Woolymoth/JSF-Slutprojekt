@@ -48,7 +48,7 @@ Now your javascript code should be up to date and up and running.
 
 
 Now you need to compile the Sass, do so by typing sass  sass "sass scss/style.scss style.css".
-To exit watch mode enter Ctrl-c.
+
 
 
 Now you should have the essential files to run the site.
