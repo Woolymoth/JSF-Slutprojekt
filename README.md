@@ -17,10 +17,10 @@ The project is divided into several files and folders, which is as following.
 * The "index.html" is the main html file which the project is built upon.
 
 
-* The "Scss" and "Css" documents are in their own separate folders, where the code is separated into five different documents depending on what area of the HTML it touches on. In the Css folder they are combined in the document mainstyle.css
+* The "Scss" and "Css" documents are in their own separate folders, where the code is separated into five different documents depending on what area of the HTML it touches on. In style.scss they are combined.
 
 
-* The "code.ts" is the typescript document which contains the code that fetches the information from the API and translates it to information readable by the HTML. The code.js is the very same code compiled to javascript by tsc and NODE.
+* The "code.ts" is the typescript document which contains the code that fetches the information from the API and translates it to information readable by the HTML.
 
 
 * The "tsconfig.json" has the configurations used during this project and should be kept the same if chosen to further build upon it.
@@ -29,13 +29,31 @@ The project is divided into several files and folders, which is as following.
 * The ".gitignore" is used for files that are unnecessary for git to track.
 
 
+        -----------------!!!!!!!! To instal, use/add to the project!!!!!!!!!!!!!!----------------
+
+
+
+
 To use and/or add to the project you need to clone the repository from github, as long as you have the tsconfig that is included in the repository you do not need to touch it further.
 
 
-Compile the typescript from your input prompt to make sure that the code runs and that the Javascript is up to date with the Typescript.
+Once you have the files in your local directory you need to compile first compile the typsecript.
+First check that your compiler is up to date by typing "tsc --version" to check what version of the program you are running.
+When that is done enter "tsc code.ts" then node.js.
 
 
-Open up the HTML on your browser, try out the buttons and admire the scenery.
+Now your javascript code should be up to date and up and running.
+
+
+
+
+Now you need to compile the Sass, do so by typing sass  sass --watch scss/style.scss:style.css.
+To exit watch mode enter Ctrl-c.
+
+
+Now you should have the essential files to run the site.
+Open up the html in your browser and check out the features
+
 
 
 If you would like to get in touch with me, here's my linked in profile :
