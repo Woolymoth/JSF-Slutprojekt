@@ -22,7 +22,7 @@ function displayUserChoice(data : any){
     element.remove();
     let userChoise = data;
     let tab = `<tr>
-    <th>Title</th>
+    <th>Title:</th>
    </tr>`;
     InfoElement.innerHTML += tab +=
   `<tr>
@@ -77,10 +77,10 @@ function displayChar(data : any, charId : number) {
     let myChar = data.results[charId];
     let tab = 
     `<tr>
-      <th>Name</th>
-      <th>Hair color</th>
-      <th>Date of Birth</th>
-      <th>Eye Color</th>
+      <th>Name:</th>
+      <th>Hair color:</th>
+      <th>Date of Birth:</th>
+      <th>Eye Color:</th>
      </tr>`;
     infoSpace.innerHTML += tab +=
     `<tr>
@@ -161,17 +161,16 @@ function fetchCity(cityId : number) {
 ;
 function displayCity(data : any, cityId : number) {
     const element = document.querySelector("tbody") as HTMLElement;
+    const infoSpace = document.getElementById('info') as HTMLElement;
     element.remove();
     var theCity = data.results[cityId];
     var tab = `<tr>
-    <th>Name</th>
-    <th>Founding</th>
-    <th>Location</th>
-    <th>Inhabitants</th>
+    <th>Name:</th>
+    <th>Founding:</th>
+    <th>Location:</th>
+    <th>Inhabitants:</th>
    </tr>`;
-   let info: HTMLElement  = document.getElementById('info')!;
-   // @ts-ignore
-   const infoSpace = info.innerHTML += tab +=
+   infoSpace.innerHTML += tab +=
   `<tr>
   <td>${theCity.name}</td>
   <td>${theCity.founded_date}</td>
